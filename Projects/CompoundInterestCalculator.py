@@ -22,7 +22,7 @@ while interest_rate == 0:
         break
         
 while time == 0:
-    time = int(input("Enter the time in years: ")) # Int because year
+    time = float(input("Enter the time in years: ")) # Int because year // but changed to float bc half year
     if principle <= 0:
         print("Years can't be less than or equal to 0.")
     else: 
@@ -31,7 +31,7 @@ while time == 0:
 total = principle * pow((1 + interest_rate / 100), time) # Compound interest formula; principle x (1 + interest/100)^time
 
 # Output
-print(f"Your principle is ${principle:.2f}\nYour interest rate is {interest_rate:.2f}%\nYour time in years is {time}")
+print(f"     -----     \nYour principle is ${principle:.2f}\nYour interest rate is {interest_rate:.2f}%\nYour time in years is {time}\n     -----    ")
 print(f"With principle (${principle:.2f}) multiplied by 1 + interest rate ({interest_rate:.2f}%), with the power of years ({time})...")
 print(f"Your compound interest would be: ${total:.2f}")
 print(f"You would be required to pay an interest of ${total - principle:.2f}") # Helps user in counting the interest
