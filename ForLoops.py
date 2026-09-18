@@ -4,7 +4,7 @@
 
 # Example 1 - Typical implementation
 for x in range(1, 11, 2): # Counts from 1 to 10, beginning inclusive, end exclusive, steps
-    print(x) # Shows all the steps taken
+    print(x, end="-") # Shows all the steps taken, remove default \n lines, replaced with "-" 
     
 # Example 2 - Countdown to birthday
 for counter in reversed(range(1, 11)): # Reverse the output, 10 to 1
