@@ -37,10 +37,10 @@ while app_on:
 
 # Calculations
 for food_price in food_prices:
-    total += sum(food_prices)
+    total += food_price
     
 for necessity_price in necessities_prices:
-    total += sum(necessities_prices)
+    total += necessity_price
 
 # Outputs
 print("----- Food -----")
