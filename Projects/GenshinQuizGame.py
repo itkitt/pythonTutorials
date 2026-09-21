@@ -63,3 +63,9 @@ print()
 score = int(score / len(questions) * 100)
 # Prints score
 print(f"Your score is {score}%")
+
+# Prints final message
+if score == 100:
+    print("You have proved yourself to be a Master of Lore within Teyvat!")
+else:
+    print("Better start reading up on the lores to enjoy the story more!")
