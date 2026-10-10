@@ -31,21 +31,23 @@ while is_running:
     try:
         guess = int(user_input) # Converts input to integer for comparison
         guesses += 1
-        
-        if guess < lowest_num or guess > highest_num:
-            print(f"Sorry, {guess} is out of range. Please select a number between {lowest_num} and {highest_num}.")
-        elif guess < answer:
-            print("Too low! Try again.")
+    except ValueError: 
+            print("Please enter a valid number.")
+            print("Example: 20, 67, 69...")
             print("-------------------------------")
-        elif guess > answer:
-            print("Too high! Try again.")
-            print("-------------------------------")
-        if guess == answer:
-            print(f"Congratulations! You've guessed the correct number {answer} in {guesses} guesses.")
-            is_running = False
+            continue
         
-    except ValueError: # Catches any non-integer input errors
-        print("Please enter a valid number.")
-        print("Example: 20, 67, 69...")
+    if guess < lowest_num or guess > highest_num:
+        print(f"Sorry, {guess} is out of range. Please select a number between {lowest_num} and {highest_num}.")
         print("-------------------------------")
-        continue
+    elif guess < answer:
+        print("Too low! Try again.")
+        print("-------------------------------")
+    elif guess > answer:
+        print("Too high! Try again.")
+        print("-------------------------------")
+    elif guess == answer:
+        print(f"Congratulations! You've guessed the correct number {answer} in {guesses} guesses.")
+        is_running = False
+        
+
