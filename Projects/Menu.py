@@ -37,7 +37,7 @@ while True:
         break
     
     elif menu.get(food) is not None: # Checks if the food item is in the menu
-        try:
+        try: # Exception handling for quantity input
             quantity = int(input(f"How many {food} would you like to order: ")) # Asks for quantity of the food item
             if quantity <= 0: # Checks if the quantity is a positive number
                 print("Please enter a positive number for the quantity.")
@@ -45,8 +45,8 @@ while True:
         except ValueError: # Catches any non-integer input errors
             print("Invalid input. Please enter a valid number for the quantity.")
             continue
-        cart[food] = cart.get(food, 0) + quantity # Adds the food item and quantity to the cart
-        total += menu[food] * quantity # Updates the total price
+        cart[food] = cart.get(food, 0) + quantity # Checks if item exists in cart, if not, adds it with quantity. cart.get is read. 
+        total += menu[food] * quantity # Updates the total price by referencing menu dictionary for actual price to be multiplied
         print(f"{quantity}x {food} added to your order. Current total: RM {total:.2f}")
         
         
@@ -58,7 +58,7 @@ print("---------- O R D E R ----------")
 
 # Outputs the final order and total
 for food, quantity in cart.items():
-    item_total = menu[food] * quantity # Calculates the total price for each item
+    item_total = menu[food] * quantity # Uses the menu dictionary to calculate total cost
     print(f"{quantity}x {food:17}: RM {item_total:.2f}") # Formats item with 20 spaces and price with 2 decimal places
 print(f"Total               : RM {total:.2f}") # Displays the total price of the order
 print("------------------------------") # Closes the order display
