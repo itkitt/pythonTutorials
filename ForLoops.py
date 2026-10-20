@@ -1,6 +1,7 @@
 # For Loops : Execute code a fixed num of time; iterate over range, sequence, string, etc
 # Format: for x in range(begin, end, steps)
 #         "x" can be named anything
+#         The returned elements, returned one at a time in for loop is called ITERABLES 
 
 # Example 1 - Typical implementation
 for x in range(1, 11, 2): # Counts from 1 to 10, beginning inclusive, end exclusive, steps
@@ -22,3 +23,15 @@ for y in range(1, 20):
         continue # Skips over declared elements
     else:
         print(y)
+        
+# Example 5 - Dictionary 
+bookshelf = {
+    "Jane Austen": ["Pride and Prejudice", "Sense and Sensibility", "Emma"],
+    "Charles Dickens": ["Great Expectations", "Oliver Twist"]
+    }
+
+# Loop through the dictionary
+for author, books in bookshelf.items(): # author = key, books = value
+    # Loop through the list of books for the current author
+    for book in books: # Inner loop for books (values) ; for value in values
+        print(f"'{book}' by {author}")
