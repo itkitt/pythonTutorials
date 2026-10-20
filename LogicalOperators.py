@@ -24,4 +24,48 @@ elif temperature < 10 and is_raining:
     print("It will be cold and rainy today, make sure to dress warmly and bring an umbrella!")
 else:
     print("The weather is moderate today, enjoy your day!")
+
+# -------------------------------------------
+
+# Membership Operators
+# Test if value found within a sequence; IN / NOT IN
+
+# Example 1 - Char in String
+
+secret_word = "travel cat" # String 
+letter = input("Guess a letter: ").lower() # Guess character within string
+
+# Implementation
+if letter in secret_word:
+    print(f"{letter} is found within the secret word!") # If the character is found within secret word
+else:
+    print(f"{letter} is NOT found within the secret word!")
     
+
+# Example 2 - Value in List
+
+# List & Input declaration 
+student_names = {"iki", "damien", "ethan"}
+student_name = input("Enter a student name: ").lower()
+
+# Implementation
+if student_name not in student_names: # If not within the list
+    print(f"{student_name} is not a student!")
+else:
+    print(f"{student_name} is a student!")
+
+# Example 3 - Dictionary 
+
+# Dictionary & Input declaration
+student_grades = {
+    "iki" : "A",
+    "damien" : "B",
+    "ethan" : "C"
+}
+student_name = input("Enter a student name: ").lower()
+
+# Implementation
+if student_name in student_grades:
+    print(f"Student {student_name} has a grade of {student_grades.get(student_name)}!") # dictionary[key] gives value ;; or student_grades.get(student_name) // student_grades[student_name]
+else:
+    print(f"{student_name} is not a student!")
