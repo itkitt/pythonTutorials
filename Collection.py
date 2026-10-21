@@ -25,7 +25,37 @@ print("Apple" in fruits) # Checks existence
 for fruit in fruits:
     print(fruit, end = " ") # Prints through for loop, accessing and outputting each elements
     
+print() # To break outputs
+    
 # print(help(fruits)) or print(dir(fruits)) -- Shows and explains all functions within lists
 
+# -----------
+# List Comprehension : Concise way to create lists
+#                    : [{expression} for {value} in {iterable} if {condition}]
 
+# Creates a list that multiplies value with 2 for 10 times
+doubles = [x*2 for x in range(1,11)] # x*2 = expression, x = value, range(1,11) = iterable
+print(doubles)
 
+# Creates a list that multiplies value with 3
+triples = [y*2 for y in range(1,11)] 
+print(triples)
+
+# Squares each values
+squares = [z*z for z in range(1,11)] 
+print(squares)
+
+# Integrating if statements
+
+# Number List
+numbers = [1, -2, 3, -4, 5, -6, 8, -7, -9, 10, 6, -14]
+
+# Implementations
+positive_nums = [num for num in numbers if num >= 0] 
+negative_nums = [num for num in numbers if num < 0]
+even_nums = [num for num in numbers if num % 2 == 0]
+odd_nums = [num for num in numbers if num % 2 == 1]
+print (positive_nums)
+print (negative_nums)
+print (even_nums)
+print (odd_nums)
