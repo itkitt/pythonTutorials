@@ -32,11 +32,14 @@ def main():
 
     # White loop
     while is_running:
-        print("Banking Program")
+        print("-----------------")
+        print("Bank Of Cat-Land")
+        print("-----------------")
         print("1. Show Balance")
         print("2. Deposit")
         print("3. Withdraw")
         print("4. Exit")
+        print("-----------------")
         
         # Prompts user to choose choice.
         choice = input("Enter your choice: ")
@@ -54,8 +57,10 @@ def main():
             print("That is not a valid choice.")
     
     # Farewell messages
+    print("-----------------")
     print("Thank you for using our Bank Program!")
     print("Have a nice day!")
+    print("-----------------")
 
 # Checks if this file is executed
 if __name__ == "__main__":
