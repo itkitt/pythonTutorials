@@ -5,6 +5,7 @@
 # Local
 # Declared variables within a function could only be used within the function; They are local variables
 # Functions can't see inside of other functions, hence why we have to pass other arguments into functions, func1(x,y)
+
 def func1():
     a = 1 # Declares "a = 1" only in this function
     print(a)
@@ -21,9 +22,9 @@ func2()
 # If functions are written inside another, the declared variable in the main function (func3) will be used by nested function (func4) if no variables are declared in nested function.
 
 def func3():
-    x = 5
+    x = 5 # Enclosed Variable
     def func4():
-        # x = 6 // If this is included, x = 6. If not, it will use enclosed variable of func3 : "x = 5"
+        # x = 6 // If this is included, x = 6. If not, it will use enclosed variable of func3 : "x = 5" 
         print(x)
     func4()
 
