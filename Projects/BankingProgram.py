@@ -44,7 +44,7 @@ def menu1():
     print("-----------------")
     print("Bank Of Cat-Land")
     print("-----------------")
-    print("You have no registered an account.")
+    print("You have not registered an account.")
     print("Please register an account to continue.")
     print("-----------------")
     print("1. Show Balance")
