@@ -1,6 +1,13 @@
 # Python Banking Program
 
 # Functions
+
+def account_info():
+    name = input("Enter your name: ")
+    age = input("Enter your age: ")
+    address = input("Enter your address: ")
+    return name, age, address
+
 def show_balance(balance): # Receives balance from main()
     print(f"Your balance is ${balance:.2f}")
 
@@ -24,37 +31,77 @@ def withdraw(balance): # Receives balance from main()
         return 0 # Ensures no errors
     else:
         return amount # To be used in main program's logic
+    
+def view_account_details(name, age, address): # Receives name, age, and address from main()
+    print("-----------------")
+    print("Account Details")
+    print("-----------------")
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Address: {address}")
+    
+def menu1():
+    print("-----------------")
+    print("Bank Of Cat-Land")
+    print("-----------------")
+    print("You have no registered an account.")
+    print("Please register an account to continue.")
+    print("-----------------")
+    print("1. Show Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Register Account")
+    print("5. View account details")
+    print("6. Exit")
+    print("-----------------")
+    
+def menu2(name): # Receives name from main()
+    print("-----------------")
+    print("Bank Of Cat-Land")
+    print("-----------------")
+    print(f"Welcome, {name}!")
+    print("-----------------")
+    print("1. Show Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Change account details")
+    print("5. View account details")
+    print("6. Exit")
+    print("-----------------")
 
 # Main Program
 def main():
     balance = 0 
     is_running = True
+    name = ""
+    age = ""
+    address = ""
 
     # White loop
     while is_running:
-        print("-----------------")
-        print("Bank Of Cat-Land")
-        print("-----------------")
-        print("1. Show Balance")
-        print("2. Deposit")
-        print("3. Withdraw")
-        print("4. Exit")
-        print("-----------------")
+        if not name: # If name is empty
+            menu1()
+        else:
+            menu2(name) # Passes name to menu2() function
         
         # Prompts user to choose choice.
         choice = input("Enter your choice: ")
         
         # Options
-        if choice == "1":
+        if choice == "1" and name:
             show_balance(balance) # Passes balance to function
-        elif choice == "2":
+        elif choice == "2" and name:
             balance += deposit() # Deposit() works because it returns amount
-        elif choice == "3":
+        elif choice == "3" and name:
             balance -= withdraw(balance) # Withdraw() works because it returns amount
         elif choice == "4":
+            name, age, address = account_info()
+        elif choice == "5" and name:
+            view_account_details(name, age, address) # Passes name, age, and address to function
+        elif choice == "6":
             is_running = False
         else:
-            print("That is not a valid choice.")
+            print("Error: Not a valid choice.")
     
     # Farewell messages
     print("-----------------")
