@@ -18,6 +18,7 @@ class Car:
         self.year = year
         self.colour = colour
         self.for_sale = for_sale
+        # for "self" just imagine that every new instances like, IkiCar would be replacing "self". self.model -> IkiCar.model
         
     # Method
     def drive(self): # Self = "object we're currently working with"
