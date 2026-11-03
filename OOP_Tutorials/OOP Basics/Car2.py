@@ -8,7 +8,7 @@
 # Class  = BLUEPRINT used to design the structure/layout of an object
 
 # Making the constructor in another script, import it here
-from car import Car
+from Car1 import Car
         
 CatCatCar = Car("Subaru", 2003, "Blue", False) # Self is already provided in the background
 # print(CatCatCar) # Gives memory address instead
