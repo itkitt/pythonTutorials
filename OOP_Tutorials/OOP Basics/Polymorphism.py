@@ -4,7 +4,9 @@
 
 # TWO WAYS TO ACHIEVE POLYMORPHISM
 # 1.  Inheritance   = An object could be treated of the same type as a parent class
-# 2. "Duck Typing" = Object must have necessary attributes/methods
+# 2. "Duck Typing"  = Object must have necessary attributes/methods
+#                   = "If it looks like a duck + quacks like a duck, it must be a duck."
+
 
 # Import abstract method
 from abc import ABC, abstractmethod
