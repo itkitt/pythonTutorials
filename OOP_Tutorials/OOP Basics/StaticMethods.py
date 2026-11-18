@@ -1,8 +1,9 @@
 # Static Method = Method belong to a class rather than any object from that class (instance)
 #               = Usually used for general utility functions
 
-# Instance methods = Best for operations on instances of the class (objects); Methods belong to individual objects from that class
-# Static methods = Best for utility functions that do not need access to class data
+# Instance methods = Best for operations on instances of the class (objects); Methods belong to individual objects from that class -- For OBJECTS
+# Static methods = Best for utility functions that do not need access to class data -- For OUTSIDE DATA, no access to class data
+# Class methods = Best for class-level data / require access to class -- For CLASS DATA
 
 # Class declaration
 class Employee:
